@@ -1,0 +1,43 @@
+---
+title: "NHAMCS 2018-22 Analysis"
+author: "Julianne Cato"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+This analysis uses patient-level emergency department visit data from the National Hospital Ambulatory Medical Care Survey (NHAMCS) from 2018 through 2022. The dataset includes information on patient demographics, visit characteristics, vital signs, medical history, triage acuity, and emergency department wait times. Triage acuity represents the level of urgency assigned to a patient at arrival, with lower acuity scores indicating a greater need for immediate medical care. The objective of this analysis is to compare demographic and clinical characteristics across triage acuity levels and to examine how emergency department wait times vary by acuity level. 
+
+## Table
+
+```{r, table, echo=FALSE}
+
+library(gtsummary)
+
+table1 <- readRDS("output/table1.rds")
+
+table1
+
+```
+
+This table summarizes selected demographic and clinical characteristics of emergency department visits across triage acuity levels. Patients in the lower, more urgent acuity categories tended to be older and were much more likely to arrive by EMS. For example, nearly half of patients in acuity level 1 arrived by EMS, compared with fewer than 10% of patients in levels 4 and 5. Average heart rate and oxygen saturation were fairly similar across the levels, while pain scores were actually highest in level 3. 
+
+## Figure
+
+```{r, figure, echo=FALSE}
+
+library(ggplot2)
+
+figure1 <- readRDS("output/figure1.rds")
+
+figure1
+
+```
+
+This figure shows the distribution of emergency department wait times across triage acuity levels. Median wait time generally increased as acuity level increased, indicating that patients with less urgent conditions tended to wait longer to be seen. Patients in acuity level 1 had the shortest typical wait times, with a median of 9 minutes, while patients in level 5 had the longest, with a median of 17 minutes. The spread of wait times also became somewhat wider in the higher-numbered acuity categories, although there was substantial variability in every level. Extreme outlier points were suppressed from the figure to improve readability, however, these observations were retained in the dataset and still included in the analysis. 
+
