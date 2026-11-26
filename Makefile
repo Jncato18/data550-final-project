@@ -13,3 +13,7 @@ output/figure1.rds: output/analysis_data.rds code/03_create_figure.R
 .PHONY: clean	
 clean:
 	rm -f output/*.rds NHAMCS_Analysis.html
+	
+.PHONY: install
+install:
+    Rscript -e "renv::restore(prompt = FALSE)"

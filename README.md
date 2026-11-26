@@ -51,16 +51,16 @@ versions in the `renv.lock` file.
 ## Setting up the R Environment 
 
 After cloning the repository and opening the project, restore the required R 
-packages by running:
+packages by running the following from the root directory of the repository:
 ```
-renv::restore()
+make install
 ```
-This will install the package versions recorded in `renv.lock` into a 
-project-specific R library.
+This runs `renv::restore` and installs the package versions recorded in 
+`renv.lock` into a project-specific R library.
 
 ## Generating the Final Report
 
-From the root directory of the repository in the terminal, run:
+After the R environment has been restored, run:
 
 ```
 make
