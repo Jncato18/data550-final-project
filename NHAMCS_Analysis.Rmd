@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Introduction
 
-This analysis uses patient-level emergency department visit data from the National Hospital Ambulatory Medical Care Survey (NHAMCS) from 2018 through 2022. The dataset includes information on patient demographics, visit characteristics, vital signs, medical history, triage acuity, and emergency department wait times. Triage acuity represents the level of urgency assigned to a patient at arrival, with lower acuity scores indicating a greater need for immediate medical care. The objective of this analysis is to compare demographic and clinical characteristics across triage acuity levels and to examine how emergency department wait times vary by acuity level. 
+This analysis uses patient-level emergency department visit data from the National Hospital Ambulatory Medical Care Survey (NHAMCS) from 2018 through 2022, conducted by the National Center for Health Statistics, Centers for Disease Control and Prevention. The dataset includes information on patient demographics, visit characteristics, vital signs, medical history, triage acuity, and emergency department wait times. Triage acuity represents the level of urgency assigned to a patient at arrival, with lower acuity scores indicating a greater need for immediate medical care. The objective of this analysis is to compare demographic and clinical characteristics across triage acuity levels and to examine how emergency department wait times vary by acuity level. 
 
 ## Table
 

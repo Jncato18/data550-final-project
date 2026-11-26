@@ -1,4 +1,4 @@
-NHAMCS_Analysis.html: NHAMCS_Analysis.Rmd output/table1.rds output/figure1.rds code/04_render_report.R
+NHAMCS_Analysis.html: NHAMCS_Analysis.Rmd output/analysis_data.rds output/table1.rds output/figure1.rds code/04_render_report.R
 	Rscript code/04_render_report.R
 
 output/analysis_data.rds: data/nhamcs_data_2018_22.csv code/01_prepare_data.R
